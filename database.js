@@ -45,9 +45,3 @@ async function addImage(filePath, description) {
   return await getImage(id);
 }
 exports.addImage = addImage;
-
-function test() {
-  console.log(pool);
-}
-
-exports.test = test;

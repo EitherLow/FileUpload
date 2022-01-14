@@ -3,10 +3,12 @@ const express = require("express");
 const multer = require("multer");
 const database = require("./database");
 const fs = require("fs");
+const path = require("path");
 
 const app = express();
-// database.test();
 const upload = multer({ dest: "images/" });
+
+app.use(express.static(path.join(__dirname, "build")));
 
 app.get("/images/:imageName", (req, res) => {
   const imageName = req.params.imageName;
