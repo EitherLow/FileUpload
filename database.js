@@ -17,6 +17,7 @@ async function getImages() {
   `;
 
   const [rows] = await pool.query(query);
+
   return rows;
 }
 exports.getImages = getImages;
